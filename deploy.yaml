@@ -9,13 +9,14 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  template: 
-    metadata: 
-    labels:
-      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
     spec:
       containers:
-        -name: nginx
-         image: swappykhot/app1
-         ports:
-          - container: 80
+        - name: nginx  # Added space after hyphen
+          image: swappykhot/app1
+          ports:
+            - containerPort: 80  # Changed 'container' to 'containerPort'
+
