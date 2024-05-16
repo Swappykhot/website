@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -15,8 +16,7 @@ spec:
         app: nginx
     spec:
       containers:
-        - name: nginx  # Added space after hyphen
+        - name: nginx
           image: swappykhot/app1
           ports:
-            - containerPort: 80  # Changed 'container' to 'containerPort'
-
+            - containerPort: 80
